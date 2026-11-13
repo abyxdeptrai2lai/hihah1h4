@@ -4,6 +4,13 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://maven.aliucord.com/releases")
     }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "com.aliucord.gradle") {
+                useModule("com.aliucord:gradle:${requested.version}")
+            }
+        }
+    }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
