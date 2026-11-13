@@ -1,6 +1,5 @@
 plugins {
-    alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.android.library) apply false
-    alias(libs.plugins.aliucord.plugin) apply true
-    alias(libs.plugins.ktlint) apply false
+    id("com.android.library") version "8.2.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.20" apply false
+    id("com.aliucord.gradle") version "1.0.0" apply false
 }
